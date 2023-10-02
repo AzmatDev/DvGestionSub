@@ -167,7 +167,7 @@ public class SubventionsController implements Initializable
 
         {
 
-            //mesSecteurs = new HashMap<>();
+            //  mesSecteurs = new HashMap<>();
             root = new TreeItem<>("Mes Secteurs");
             root.setExpanded(true);
             tvMontantsParSecteurs.setRoot(root);
@@ -229,10 +229,9 @@ public class SubventionsController implements Initializable
                 lesSubventions.get(nomVille).get(nomSecteur).get(montant).add(uneStructure);
             }
 
-            // Nettoyer l'arbre existant
             root.getChildren().clear();
 
-            // Reconstruire l'arbre à partir des données
+
             for (String ville : lesSubventions.keySet()) {
                 TreeItem<String> villeItem = new TreeItem<>(ville);
                 villeItem.setExpanded(true);
